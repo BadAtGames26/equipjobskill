@@ -1,0 +1,23 @@
+[package]
+name = "equipjobskill"
+version = "0.1.0"
+authors = ["BadAtGames26"]
+edition = "2021"
+
+[package.metadata.skyline]
+titleid = "0100a6301214e000" # Fire Emblem Engage
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+engage = { git = "https://github.com/DivineDragonFanClub/engage.git", version = "0.6.1" }
+skyline = "0.2.0"
+unity = { git = "https://github.com/DivineDragonFanClub/unity.git", version = "0.3.0" }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
